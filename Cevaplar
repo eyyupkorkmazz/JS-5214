@@ -1,0 +1,32 @@
+/*
+
+1.Ne oluyor da butona bastığımda alttaki linkler görünmez ise görünür oluyor, görünürise görünmez oluyor? Bunun mantığı nedir, nasıl yapılmış?
+
+Javascript'e yazılan fonksiyon ile display özelliği kontrol edilmiş, butona basıldığında display özelliği tıklanmadan önce "none" ise "block" yaparak görünür hale getiriyor eğer "block" ise "none" hale getiriyor.
+
+
+
+2.Bunu responsive bir şekilde nasıl yapabilirdik? Masaüstü ekranında normal navbar gösterip mobil ekranda bu şekilde açılıp kapanan mobil navbar nasıl yapabiliriz?
+
+HTML tarafında linkleri içeren bir <div id="myLinks"> var. Bu div, hem masaüstünde hem mobilde kullanılacak.
+
+Mobilde <a class="icon"> içinde bir hamburger butonu gösteriyorsun ve tıklanınca JavaScript ile #myLinks'in görünürlüğünü değiştiriyorsun.
+
+JavaScript’te, butona tıklanınca #myLinks div'inin display değeri değişiyor, ayrıca .topnav'a responsive sınıfı eklenip kaldırılıyor.
+
+CSS ile ekran genişliği 600px altına düştüğünde:
+
+    Menü dikey hale geliyor (flex-direction: column)
+
+    #myLinks gizleniyor
+
+    Hamburger menü (.icon) görünür oluyor
+
+Ekran genişliği tekrar büyüdüğünde (min-width: 601px) ise:
+
+    Hamburger gizleniyor
+
+    #myLinks her zaman görünür oluyor (display: block !important ile)
+
+*/
+
